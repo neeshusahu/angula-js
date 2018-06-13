@@ -1,0 +1,23 @@
+﻿@model Graft.Models.Details
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Ajax.BeginForm("Get", "Home", new AjaxOptions { UpdateTargetId = "test" ,HttpMethod="Get",InsertionMode=InsertionMode.Replace}))
+{
+    
+        <tr>
+            <td>
+                @Html.TextBoxFor(Model => Model.id);
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Get" /></td>
+        </tr>
+        <div>
+        
+
+}
+
